@@ -1,0 +1,35 @@
+
+ <p>test works!
+  
+</p>
+<p>
+{{testdata}}
+</p>
+<div>property biinding</div>
+<form>
+<input id="{{idname}}" type="text"  value="asdfg">
+<input [id]="idname" [disabled]="isdisble" type="text"  value="asdfg"> 
+<h1 class={{classname}}>class binding</h1>
+<h1 [class]="classname">class binding</h1>
+<h1 [class.abc]="cssappy">class binding</h1>
+
+<!-- multiple clssassign -->
+<h1 [ngClass]="multiclass">multi class binding</h1>
+<!-- style binf -->
+<h1 [style.Color]="'pink'">style binding</h1>
+<h1 [style.Color]="stylecolor">style binding</h1>
+<h1 [ngStyle]="multistyle">multi style binding</h1>
+
+</form> 
+
+<div >reference variable </div>
+<input #refdata type="text">
+<button (click)="funrefdata(refdata)"> click ref variable </button>{{showref}}
+
+
+<div >two way binding  </div>
+<input [(ngModel)]="empname" type="text">
+{{empname}}
+
+<div >structure directive  </div>
+<div *ngif ></div>
