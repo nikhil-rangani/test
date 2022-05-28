@@ -17,7 +17,7 @@
 <h1 [ngClass]="multiclass">multi class binding</h1>
 <!-- style binf -->
 <h1 [style.Color]="'pink'">style binding</h1>
-<h1 [style.Color]="stylecolor">style binding</h1>
+<h1 [style.Color]="false ? stylecolor :'orange'">style aaa binding</h1>
 <h1 [ngStyle]="multistyle">multi style binding</h1>
 
 </form> 
@@ -31,5 +31,25 @@
 <input [(ngModel)]="empname" type="text">
 {{empname}}
 
-<div >structure directive  </div>
-<div *ngif ></div>
+<div >structure directive  if </div>
+<div *ngIf="condition"> condition is true</div>
+
+<div >structure directive  if  else</div>
+
+<div *ngIf="!condition; else elseblock"> condition is true</div>
+<ng-template  #elseblock>else block
+</ng-template>
+
+<div >structure directive  if  then else</div>
+
+<div *ngIf="true;then thenblock; else elseblock"></div>
+<ng-template  #thenblock>then if block  work  
+</ng-template>
+
+<div>switch case</div>
+<div [ngSwitch]="colorcase">
+    <div *ngSwitchCase="'blue'" >{{colorcase}}</div>   
+    <div *ngSwitchCase="'green'" >{{colorcase}}</div>
+    <div #ngSwitchDefault >no data match</div>   
+    
+</div>

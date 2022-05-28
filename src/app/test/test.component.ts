@@ -5,7 +5,7 @@ import { bufferToggle } from 'rxjs';
   //selector: 'app-test',<app-test>
   //selector: '.app-test', class="app-test"
   selector: '[app-test]', 
-  templateUrl:'/test.component.html',
+  templateUrl:'./test.component.html',
   styles: [`p{
              color:red
           }
@@ -43,5 +43,6 @@ export class TestComponent implements OnInit {
   this.showref= refdara.value;
   }
   empname="";
-  condition= true
+  condition= true;
+  colorcase="green";
 }
