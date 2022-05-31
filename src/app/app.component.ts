@@ -24,4 +24,14 @@ export class AppComponent implements OnInit {
   getname(){
     return "my name "+ this.title;
   }
+  sendchild={
+    abc:"wellcome ",
+    zxc:"chiled"
+  }
+  databack="";
+  persondata={
+    "fname":"nikhil",
+    "lnamwe":"rangani"
+  }
+  date=new Date();
 }

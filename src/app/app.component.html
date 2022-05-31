@@ -16,15 +16,45 @@
     <h1>{{ location}}</h1>
     
     <h1>{{ getname()}}</h1>
+
+    <div> pipe operator | </div>
+    <h4> {{ title | uppercase }}</h4>
+  
+    <h4> {{ title | lowercase }}</h4>
+  
+    <h4> {{ title | titlecase }}</h4>
+  
+    <h4> {{ title | slice:3:5 }} ==  index based count</h4>
+  
+    <h4> {{ persondata | json }}</h4>
+    
+    <h4> {{ 1.234 | number:'1.2-3' }}</h4>
+  
+    <h4> {{ 1.234 | number:'2.2' }}</h4>
+  
+    <h4> {{ 1.235654 | number:'3.2-4' }}</h4>
+  
+    <h4> {{0.25 | percent  }}</h4>
+    <h4> {{0.25 | currency  }}</h4>
+    <h4> {{0.25 | currency:"INR" :"code" }}</h4>
+    <h4> {{0.25 | currency:"INR" }}</h4>
+    
+    <h4> {{ date }}</h4>
+    
+    <h4> {{ date | date:'short' }}</h4>
+    
+    <h4> {{ date | date:'shortDate' }}</h4>
+    <h4> {{ date | date:'shortTime' }}</h4>
+    <h4> {{ date | date:'short' }}</h4>
     <h1>event binding</h1>
     
     <button (click)="btnclick($event)">click here</button>
     
     <button (click)="btndata='second btn click'">click here</button>
     {{btndata}}
-  <div app-test>
-</div>
-
+  <app-test  (chhileddata)="databack=$event" [parentDataa]="sendchild" >
+    </app-test>
+    {{databack}}
   </div>
 
 

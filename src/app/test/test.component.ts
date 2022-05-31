@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input, Output, EventEmitter} from '@angular/core';
 import { bufferToggle } from 'rxjs';
 
 @Component({
   //selector: 'app-test',<app-test>
   //selector: '.app-test', class="app-test"
-  selector: '[app-test]', 
+  selector: 'app-test', 
   templateUrl:'./test.component.html',
   styles: [`p{
              color:red
@@ -43,6 +43,13 @@ export class TestComponent implements OnInit {
   this.showref= refdara.value;
   }
   empname="";
-  condition= true;
-  colorcase="green";
+  condition= true
+  colorcase="green"
+  colorfor:Array<string> = ['one','two', 'three', 'four'] 
+  @Input('parentDataa') public sendchild : any ;
+  @Output() public chhileddata= new EventEmitter();
+  chieldcall(){
+    this.chhileddata.emit("data return to chiled");
+  }
+
 }

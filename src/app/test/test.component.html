@@ -49,7 +49,19 @@
 <div>switch case</div>
 <div [ngSwitch]="colorcase">
     <div *ngSwitchCase="'blue'" >{{colorcase}}</div>   
-    <div *ngSwitchCase="'green'" >{{colorcase}}</div>
-    <div #ngSwitchDefault >no data match</div>   
-    
+    <div *ngSwitchCase="'greeSn'" >{{colorcase}}</div>
+    <div *ngSwitchDefault >no data match</div>   
 </div>
+
+<div>FOR LOOP</div>
+<!-- index as i 
+    first as f
+    last as l
+    odd as o
+    even as e
+-->
+<div *ngFor="let lopdata  of colorfor; index as i "> {{i+" "}}{{lopdata.toUpperCase()}}
+</div>
+<div >component interaction parent to chiled</div>
+{{sendchild.abc}}{{sendchild.zxc}}
+<button (click)="chieldcall()">click chiled</button>
